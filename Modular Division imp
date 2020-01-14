@@ -1,0 +1,30 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+/*
+ * Complete the summingSeries function below.
+ */
+int main() {
+    /*
+     * Write your code here.
+     */
+     int t;
+     scanf("%d",&t);
+     while(t>0)
+     {
+    long long int n;
+    scanf("%lld",&n);
+    long long p=(n%1000000007)*(n%1000000007);
+    p=p%1000000007;
+printf("%lld\n",p);
+--t;
+}
+}
+
