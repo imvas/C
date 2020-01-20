@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int a,b,c,d,j=0,ans=1;
+    printf("Enter Value of a: ");
+    scanf("%d",&a);
+    printf("Enter Value of b: ");
+    scanf("%d",&b);
+  c=(a>b)?b:a;
+    int x[c];
+   while(c%2==0)
+   {
+       x[++j]=2;
+       c=c/2;
+   }
+   for(int i=3;i<=sqrt(d);i=i+2)
+   {
+       while(c%i==0)
+       {
+       x[++j]=i;
+       c=c/i;
+       }
+   }
+   if(c>2)
+   {
+       x[++j]=c;
+   }
+   for(int i=1;i<=j;i++)
+   {
+       int m=0,n=0;
+       if(a%x[i]==0)
+       {
+           a=a/x[i];
+           m=1;
+       }
+       if(b%x[i]==0)
+       {
+           b=b/x[i];
+           n=1;
+       }
+       if(m==1&&n==1)
+       {
+           ans=ans*x[i];
+       }
+   }
+   printf("GCD of a and b is: ");
+   printf("%d",ans);
+}
